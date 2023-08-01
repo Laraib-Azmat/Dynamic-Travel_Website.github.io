@@ -8,31 +8,34 @@ body{
     background-color: black;
     font-family: 'Roboto Slab', serif;
    color: aliceblue;
+   overflow-x: hidden;
 }
 
 .main-header{
     min-height: 10vh;
+    font-size: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    margin: auto;
+    margin: 0rem auto;
     padding-top: 2rem;
-    z-index: 3;
+    position: relative;
+    z-index: 2;
 }
 
 #logo{
     color: aliceblue;
     cursor: pointer;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
 }
 
 .line-1 , .line-2, .line-3{
     width: 3rem;
-    height: 0.3rem;
+    height: 0.2rem;
     background-color: aliceblue;
-    margin: 0.3rem;
-    cursor: pointer;
+    margin: 0.4rem;
+    pointer-events: none;
 }
 .line-2{
 width: 2.3rem;
@@ -51,39 +54,49 @@ width: 1.3rem;
 
 }
 
-.reveal-img,
-.reveal-text {
-  position: absolute;
-  width: 100%;
-  height: 150%;
-  background: #f2f2f3;
-  left: 0;
-  top: -15%;
-}
-.img-sec{
-    position: relative;
-}
-.img-sec img{
-object-fit: cover;
 
-}
-
-.text{
+.desc{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content:center;
     align-items: center;
     padding-left: 3rem;
     flex: 1;
     position: relative;
+    flex-basis: 25rem;
+ background-color: black;
 }
 
 
-.text h1{
+.reveal-img, .reveal-text
+ {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:black;
+  left: 0%;
+  top: 0%;
+
+}
+.img-sec{
+    overflow: hidden;
+    flex-basis: 25rem;
+    flex: 2;
+    position: relative;
+}
+
+.img-sec img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    }
+.desc h1{
     font-size: 4rem;
+    color: white;
 }
 
-.text p{
+.desc p{
     font-size: 1.5rem;
     padding: 2rem 0rem;
     color: rgb(174, 169, 168);
@@ -116,6 +129,8 @@ object-fit: cover;
     position: fixed;
     top: 0;
     right: 0;
+    opacity: 1;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -146,3 +161,70 @@ object-fit: cover;
    color: rgb(37, 37, 37);
    line-height: 2rem;
 }
+
+.cursor{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+   transition: all 0.5s ease-in-out;
+   transition-property:background , transform;
+   transform-origin: 75% 75%;
+}
+
+.nav_active{
+background-color: rgb(145, 175, 175);
+transform: scale(2);
+}
+.btn_active{
+    background-color: rgb(186, 178, 178);
+    transform: scale(2);
+}
+
+.cursor-text{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50% ,-50%);
+ font-size: 0.5rem;
+color: black;
+}
+
+.text{
+    position: relative;
+    overflow: hidden;
+}
+
+.swipe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+   mix-blend-mode: darken;
+    transform: translateY(100%);
+}
+
+.sec1-swipe{
+    background:     rgb(241, 204, 117);
+}
+.sec2-swipe{
+    background:      rgb(84, 162, 241);
+}
+.sec3-swipe{
+    background:     rgb(236, 111, 182);
+}
+
+.ScrollMagic-pin-spacer {
+    position: static !important;
+  }
+
+  .burger{
+    cursor: pointer;
+  }
+  .hide{
+    overflow: hidden;
+  }
