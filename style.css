@@ -9,8 +9,11 @@ body{
     font-family: 'Roboto Slab', serif;
    color: aliceblue;
    overflow-x: hidden;
+   position: relative;
 }
-
+main{
+    position: absolute;
+}
 .main-header{
     min-height: 10vh;
     font-size: 1rem;
@@ -228,3 +231,77 @@ color: black;
   .hide{
     overflow: hidden;
   }
+
+ /* second page */
+
+ .section{
+   min-height: 90%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+ }
+ .fashion-text{
+    flex: 1;
+  flex-basis: 25rem;
+  
+ }
+ .fashion-text h1{
+    font-size: 4rem;
+ margin-bottom: 2rem;
+ }
+ .fashion-text p{
+    font-size: 1.5rem;
+ }
+
+ .numbr span{
+    font-size: 8rem;
+    color: rgb(121, 122, 123);
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+ }
+ .fashion-img{
+    flex: 1;
+    height: 80vh;
+   padding-left: 3rem;
+   margin: 2rem;
+   overflow: hidden;
+ }
+ .fashion-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ .fashion-1 h1{
+    color: rgb(224, 177, 115);
+ }
+ .fashion-2 h1{
+    color: rgb(75, 218, 158);
+ }
+ .fashion-3 h1{
+    color: rgb(224, 115, 217);
+ }
+
+ .slide{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+ }
+ .slide1{
+    background-color: rgb(28, 200, 143);
+    z-index: 5;
+ }
+ .slide2{
+    background-color: rgb(127, 70, 250);
+    z-index: 4;
+ }
+ .slide3{
+    background-color: rgb(212, 127, 255);
+    z-index: 3;
+ }

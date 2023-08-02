@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Travel Website</title>
   </head>
-  <body>
+  <body data-barba="wrapper">
     <header class="main-header">
-      <h2><a href="./index.html" id="logo">Travel.</a></h2>
+      <h2><a href="../index.html" id="logo">Travel.</a></h2>
       <div class="burger">
         <div class="line-1"></div>
         <div class="line-2"></div>
@@ -20,7 +20,7 @@
       </div>
     </header>
 
-    <main>
+    <main data-barba-namespace="home" data-barba = "container" >
       <!-- Section 1 -->
 
       <section class="sec">
@@ -40,7 +40,7 @@
               consequatur dolorem.
             </p>
 
-            <a href="./fashion/index2.html" class="explore-button">Explore</a>
+            <a href="./fashion/index2.html"  class="explore-button">Explore</a>
           
           <div class="reveal-text"></div>
         </div>
@@ -68,7 +68,7 @@
               reiciendis suscipit accusantium!
             </p>
 
-            <a href="#" class="explore-button">Explore</a>
+            <a href="./fashion/index2.html" class="explore-button">Explore</a>
     
           <div class="reveal-text"></div>
         </div>
@@ -94,7 +94,7 @@
               reiciendis suscipit accusantium!
             </p>
 
-            <a href="#" class="explore-button">Explore</a>
+            <a href="./fashion/index2.html" class="explore-button">Explore</a>
     
           <div class="reveal-text"></div>
         </div>
@@ -122,9 +122,11 @@
       <span class="cursor-text"></span>
     </div>
 
-    <!-- <div class="swipe swipe1"></div>
-    <div class="swipe swipe2"></div>
-    <div class="swipe swipe3"></div> -->
+    <div class="slide slide1"></div>
+    <div class=" slide  slide2"></div>
+    <div class= "slide  slide3"></div>
+
+    <script src="https://unpkg.com/@barba/core"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
