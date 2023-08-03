@@ -54,7 +54,7 @@ width: 1.3rem;
   width: 80%;
   margin: auto;
   min-height: 100vh;
-
+overflow: hidden;
 }
 
 
@@ -75,16 +75,16 @@ width: 1.3rem;
  {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 130%;
   background:black;
   left: 0%;
-  top: 0%;
+  top: -10%;
 
 }
 .img-sec{
     overflow: hidden;
     flex-basis: 25rem;
-    flex: 2;
+    flex: 1;
     position: relative;
 }
 
@@ -304,4 +304,94 @@ color: black;
  .slide3{
     background-color: rgb(212, 127, 255);
     z-index: 3;
+ }
+
+ /* Media query */
+ @media screen and (width <= 1500px) {
+    .img-sec{
+        flex-basis: 30rem;
+    }
+ 
+ }
+
+ @media screen and (width <= 1020px) {
+    .sec{
+        display: block;
+        width: 100%;
+     height: 90%;
+     align-self: center;
+     margin: 1rem;
+    }
+    .desc h1{
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    .img-sec img{
+      height: 60%;
+      margin-top: 0.5rem;
+    }
+    .explore-button{
+        align-self: center;
+    }
+    .nav-bar{
+   display: block;
+
+            }
+    .list{
+        margin-top: 3rem;
+    transform: translateX(30%);
+    }  
+    .nav-text p{
+ font-size: 2rem;
+ line-height: 2;
+ }
+ .section{
+    display: block;
+ }
+.fashion-img img{
+    height: 60%;
+    object-position: top;
+}
+.fashion-img{
+    padding: 0%;
+}
+ .fashion-text h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+ }
+ .fashion-text p{
+    font-size: 1rem;
+ }
+
+
+ }
+ @media screen and (width <= 750px) {
+    body{
+        width: 100%;
+        margin: auto;
+    }
+    .desc h1{
+        font-size: 2rem;
+    }
+
+
+ }
+ @media screen and (width<=415px) {
+   
+    .desc{
+        padding-left: 0%;
+    }
+    .desc h1{
+        font-size: 1.5rem;
+    }
+    .desc p{
+        font-size: 1rem;
+    }
+.nav-text{
+    display: none;
+}
+.list{
+    transform: translateX(0%);
+}
+
  }

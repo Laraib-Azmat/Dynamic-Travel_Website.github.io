@@ -1,3 +1,6 @@
+const mouse = document.querySelector(".cursor");
+const burger = document.querySelector(".burger");
+
 let controller 
 let scene;
 let scene2;
@@ -61,7 +64,6 @@ function scrollAnimation() {
 
 
 function cursor(e) {
-    const mouse = document.querySelector(".cursor");
     mouse.style.top = e.pageY + "px";
     mouse.style.left = e.pageX + "px";
 }
@@ -88,7 +90,6 @@ function cursorActive(e) {
 }
 
 function openBurger() {
-    const burger = document.querySelector(".burger");
     burger.classList.toggle("active");
     if (burger.classList.contains("active")) {
         document.body.classList.add("hide");
@@ -195,5 +196,3 @@ function secondAnimation() {
 window.addEventListener("mousemove", cursor)
 window.addEventListener("mouseover", cursorActive);
 burger.addEventListener("click", openBurger);
-
-
